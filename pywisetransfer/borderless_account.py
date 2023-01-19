@@ -8,7 +8,7 @@ from pywisetransfer.endpoint import JsonEndpointWithSCA
 class BorderlessAccountService(Base):
     list = JsonEndpoint(path="/v1/borderless-accounts", required_params=["profileId"])
     statement = JsonEndpointWithSCA(
-        path="/v3/profiles/{profile_id}/borderless-accounts/{account_id}/statement.json",
+        path="/v1/profiles/{profile_id}/borderless-accounts/{account_id}/statement.json",
         required_params=["currency", "intervalStart", "intervalEnd"],
     )
 
